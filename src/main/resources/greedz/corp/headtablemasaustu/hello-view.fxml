@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="greedz.corp.headtablemasaustu.UIController" spacing="10" alignment="CENTER">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <children>
+        <VBox alignment="CENTER">
+            <ImageView fitWidth="272.5" fitHeight="176">
+                <image>
+                    <Image url="greedz/corp/headtablemasaustu/static/logo.png"/>
+                </image>
+            </ImageView>
+            <Label text="PowerPoint Creator"/>
+        </VBox>
+        <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED">
+            <content>
+                <FlowPane fx:id="namesBox" hgap="10" vgap="10" prefWrapLength="400" alignment="TOP_LEFT">
+                    <children>
+                        <TextField fx:id="firstNameField" promptText="İsim"/>
+                    </children>
+                </FlowPane>
+            </content>
+        </ScrollPane>
+        <Button text="Yeni Kişi Ekle" onAction="#addNameField" maxWidth="145"/>
+        <ComboBox fx:id="fontComboBox"/>
+        <TextField fx:id="fontSizeField" promptText="Font Boyutu" maxWidth="145"/>
+        <Button text="Arka Plan Görseli Seç" onAction="#chooseBackgroundImage" maxWidth="145"/>
+        <Button text="Slaytı Oluştur" onAction="#createPowerPoint" maxWidth="145"/>
+        <Button text="Sıfırla" onAction="#resetForm"/>
+        <TextField fx:id="fileNameField" promptText="Dosya Adı"/>
+        <ImageView fx:id="slideImageView" fitWidth="600" preserveRatio="true"/>
+    </children>
+</VBox>
